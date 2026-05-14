@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Gallery | Mercedes BMW Audi Tesla Porsche Aurus Rolls-Royce LADA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🏁 CAR GALLERY</h1>
+        <div class="subtitle">Выбери альбом</div>
+    </header>
+
+    <!-- ВЕРХНЯЯ ЧАСТЬ КАТЕГОРИЙ -->
+
+    <div id="topAlbumsGrid" class="albums-grid"></div>
+
+    <!-- НИЖНЯЯ ЧАСТЬ КАТЕГОРИЙ -->
+    <div id="bottomAlbumsGrid" class="albums-grid"></div>
+
+    <!-- ЭКРАН ДЛЯ ПАПКИ LADA (внутренние альбомы) -->
+    <div id="folderView" style="display: none;">
+        <div class="gallery-header">
+            <button id="backToAlbumsFromFolder" class="back-btn">← ВСЕ АЛЬБОМЫ</button>
+            <h2 id="folderTitle"></h2>
+        </div>
+        <div id="folderGrid" class="albums-grid"></div>
+    </div>
+
+    <!-- ЭКРАН ГАЛЕРЕИ ФОТО -->
+    <div id="galleryView" style="display: none;">
+        <div class="gallery-header">
+            <button id="backToFolderBtn" class="back-btn">← НАЗАД К АЛЬБОМАМ</button>
+            <h2 id="albumTitle"></h2>
+        </div>
+
+        <div class="main-photo-container">
+            <img id="mainPhoto" src="" alt="Фото автомобиля">
+        </div>
+
+        <div class="controls">
+            <button id="prevPhoto">◀ НАЗАД</button>
+            <button id="slideshowBtn">▶ СЛАЙД-ШОУ</button>
+            <button id="nextPhoto">ВПЕРЕД ▶</button>
+        </div>
+
+        <div id="thumbsGrid" class="thumbs-grid"></div>
+    </div>
+
+    <!-- МОДАЛЬНОЕ ОКНО ДЛЯ УВЕЛИЧЕНИЯ -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
